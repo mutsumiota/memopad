@@ -1,0 +1,13 @@
+<p>
+  <b>Title:</b>
+  <%=h @memopad.title %>
+</p>
+
+<p>
+  <b>Due:</b>
+  <%=h @memopad.due %>
+</p>
+
+
+<%= link_to 'Edit', edit_memopad_path(@memopad) %> |
+<%= link_to 'Back', memopads_path %>

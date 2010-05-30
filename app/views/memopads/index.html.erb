@@ -1,0 +1,22 @@
+<h1>Listing memopads</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Due</th>
+  </tr>
+
+<% @memopads.each do |memopad| %>
+  <tr>
+    <td><%=h memopad.title %></td>
+    <td><%=h memopad.due %></td>
+    <td><%= link_to 'Show', memopad %></td>
+    <td><%= link_to 'Edit', edit_memopad_path(memopad) %></td>
+    <td><%= link_to 'Destroy', memopad, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New memopad', new_memopad_path %>

@@ -1,0 +1,20 @@
+<h1>Editing memopad</h1>
+
+<% form_for(@memopad) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :due %><br />
+    <%= f.date_select :due %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @memopad %> |
+<%= link_to 'Back', memopads_path %>
